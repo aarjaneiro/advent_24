@@ -37,6 +37,7 @@ int main() {
         r_num.insert(std::stoi(number_buffer));
         sz++;
     }
+    file.close();
 
     // Part 1
     auto l_start = l_num.begin();

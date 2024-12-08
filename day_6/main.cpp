@@ -23,6 +23,9 @@ static std::vector<bool> grid{};
 
 // finds if there exists a size-2 subsequence that repeats
 bool is_repeating_subseq(const std::vector<uint> &numbers) {
+    if (numbers.size() < 2) {
+        return false;
+    }
     for (uint i = 0; i < numbers.size() - 1; i++) {
         for (uint j = i + 1; j < numbers.size() - 1; j++) {
             if (numbers[i] == numbers[j] && numbers[i + 1] == numbers[j + 1]) {
